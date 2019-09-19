@@ -1,4 +1,4 @@
 *
 dotfiles
-!.vim
+!.vim/config/*
 !.vimrc

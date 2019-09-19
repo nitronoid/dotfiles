@@ -11,6 +11,7 @@ let configs = [
 \   'search.vim',
 \   'language.vim',
 \   'line.vim',
+\   'terminal.vim',
 \   'clang_format.vim'
 \]
 
@@ -25,3 +26,6 @@ endfor
 " Set the python executables
 let g:python_host_prog = "python2.7"
 let g:python3_host_prog = "python3.7"
+
+
+
