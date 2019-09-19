@@ -1,16 +1,26 @@
 " Force neovim
 set nocompatible
 
-" Source all configs
-source ~/.vim/config/plugins.vim
-source ~/.vim/config/color_scheme.vim
-source ~/.vim/config/syntax_highlighting.vim
-source ~/.vim/config/indentation.vim
-source ~/.vim/config/backup.vim
-source ~/.vim/config/search.vim
-source ~/.vim/config/language.vim
-source ~/.vim/config/line.vim
-source ~/.vim/config/clang_format.vim
+" List of configuration files
+let configs = [
+\   'plugins.vim',
+\   'color_scheme.vim',
+\   'syntax_highlighting.vim',
+\   'indentation.vim',
+\   'backup.vim',
+\   'search.vim',
+\   'language.vim',
+\   'line.vim',
+\   'clang_format.vim'
+\]
+
+" Configuration directory
+let s:vim_home = '~/.vim/config'
+
+" Source all configuration files
+for f in configs
+  exec 'source '.s:vim_home.'/'.f
+endfor
 
 " Set the python executables
 let g:python_host_prog = "python2.7"
