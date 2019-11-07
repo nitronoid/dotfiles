@@ -40,7 +40,7 @@ alias wake="xrandr --output eDP-1 --brightness 1"
 alias dotfiles="git --git-dir=${HOME}/dotfiles --work-tree=${HOME}"
 
 # fzf command config
-export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_DEFAULT_COMMAND="fd"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--preview='bat {} --color=always'"
 
