@@ -1,10 +1,3 @@
-# .bashrc
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-  . /etc/bashrc
-fi
-
 # Terminal colours
 export PS1="\[\e[31m\]\u@\h:\W$\[\e[0m\] "
 
@@ -15,6 +8,8 @@ alias clang14="clang++ -std=c++14"
 alias g++14="g++ -std=c++14"
 alias clang17="clang++ -std=c++17"
 alias g++17="g++ -std=c++17"
+
+export PATH="${PATH}:~/.local/bin"
 
 fast_opts="\
 -Ofast \
@@ -29,6 +24,7 @@ alias clang_fast="clang17 ${fast_opts}"
 
 # Rust-lang
 source ~/.cargo/env
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Alias to open files
 alias xopen="xdg-open"
@@ -51,4 +47,8 @@ export TLDR_COLOR_DESCRIPTION="green"
 export TLDR_COLOR_EXAMPLE="yellow"
 export TLDR_COLOR_COMMAND="cyan"
 export TLDR_COLOR_PARAMETER="white"
+
+if [ -f ~/.config/exercism/exercism_completion.bash ]; then
+  source ~/.config/exercism/exercism_completion.bash
+fi
 
