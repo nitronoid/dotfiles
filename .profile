@@ -22,9 +22,14 @@ fast_opts="\
 alias g++_fast="g++17 ${fast_opts}"
 alias clang_fast="clang17 ${fast_opts}"
 
+export EDITOR="nvim"
+
 # Rust-lang
 source ~/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Use a modern ls
+alias ls='exa'
 
 # Alias to open files
 alias xopen="xdg-open"
