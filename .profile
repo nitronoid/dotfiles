@@ -1,3 +1,22 @@
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # Terminal colours
 export PS1="\[\e[31m\]\u@\h:\W$\[\e[0m\] "
 
@@ -8,8 +27,6 @@ alias clang14="clang++ -std=c++14"
 alias g++14="g++ -std=c++14"
 alias clang17="clang++ -std=c++17"
 alias g++17="g++ -std=c++17"
-
-export PATH="${PATH}:~/.local/bin"
 
 fast_opts="\
 -Ofast \
@@ -56,4 +73,7 @@ export TLDR_COLOR_PARAMETER="white"
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   source ~/.config/exercism/exercism_completion.bash
 fi
+
+# vi mode in the shell
+set -o vi
 
