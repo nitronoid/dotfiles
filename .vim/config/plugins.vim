@@ -10,6 +10,7 @@ Plug 'rhysd/vim-clang-format'
 Plug 'rust-lang/rust.vim'
 Plug 'superfunc/usda-syntax'
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
+Plug 'vim-scripts/DoxygenToolkit.vim'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 
