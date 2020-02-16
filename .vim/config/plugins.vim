@@ -11,8 +11,12 @@ Plug 'rust-lang/rust.vim'
 Plug 'superfunc/usda-syntax'
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
 Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'kbenzie/vim-spirv'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 
 " Run neomake whenever writing the buffer to file
 call neomake#configure#automake('w')
+
+" Disassemble SPIRV when editing
+let g:spirv_enable_autodisassemble = 1
