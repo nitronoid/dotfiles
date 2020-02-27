@@ -12,6 +12,7 @@ let configs = [
 \   'language.vim',
 \   'line.vim',
 \   'terminal.vim',
+\   'providers.vim',
 \   'clang_format.vim'
 \]
 
@@ -22,10 +23,5 @@ let s:vim_home = '~/.vim/config'
 for f in configs
   exec 'source '.s:vim_home.'/'.f
 endfor
-
-" Set the python executables
-let g:python_host_prog = "python2.7"
-let g:python3_host_prog = "python3.7"
-
 
 
