@@ -3,16 +3,17 @@ set nocompatible
 
 " List of configuration files
 let configs = [
+\   'navigation.vim',
+\   'language.vim',
+\   'search.vim',
+\   'backup.vim',
+\   'indentation.vim',
+\   'providers.vim',
+\   'line.vim',
 \   'plugins.vim',
 \   'color_scheme.vim',
-\   'syntax_highlighting.vim',
-\   'indentation.vim',
-\   'backup.vim',
-\   'search.vim',
-\   'language.vim',
-\   'line.vim',
 \   'terminal.vim',
-\   'providers.vim',
+\   'syntax_highlighting.vim',
 \   'clang_format.vim'
 \]
 
