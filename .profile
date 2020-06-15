@@ -69,3 +69,7 @@ fi
 # vi mode in the shell
 set -o vi
 
+export DISPLAY=:0
+export NODE_ENV=production
+
+export PATH="${PATH}:${HOME}/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin"

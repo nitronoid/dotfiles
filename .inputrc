@@ -1,0 +1,11 @@
+set editing-mode vi
+set keymap vi
+set convert-meta on
+set show-mode-in-prompt on
+set vi-ins-mode-string "+"
+set vi-cmd-mode-string ":" 
+set keymap vi-command
+"k": next-history
+"l": previous-history
+"j": backward-char
+";": forward-char
