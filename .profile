@@ -7,7 +7,7 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source ~/.fzf.bash
 
 # Terminal colours
 export PS1="\[\e[31m\]\u@\h:\W$\[\e[0m\] "
