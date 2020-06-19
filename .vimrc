@@ -18,7 +18,7 @@ let configs = [
 \]
 
 " Configuration directory
-let s:vim_home = '~/.vim/config'
+let s:vim_home = '${HOME}/.vim/config'
 
 " Source all configuration files
 for f in configs
