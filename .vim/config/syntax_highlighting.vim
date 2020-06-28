@@ -20,12 +20,18 @@ augroup CUDA_SYNTAX
 	au BufNewFile,BufRead *.cu set ft=cuda
 	au BufNewFile,BufRead *.cuh set ft=cuda
 augroup END
+"
+" Enable RUST syntax highlighting
+augroup RUST_SYNTAX
+	au!
+	au BufNewFile,BufRead *.rs set ft=rust
+augroup END
 
 " Enable USD syntax highlighting
 augroup USDA_SYNTAX
 	au!
-	au BufRead,BufNewFile *.usd set filetype=usda
-	au BufRead,BufNewFile *.usda set filetype=usda
+	au BufRead,BufNewFile *.usd set ft=usda
+	au BufRead,BufNewFile *.usda set ft=usda
 	" Load the syntax file
 	autocmd FileType usda source ~/.vim/bundle/usda-syntax/vim/usda.vim
 augroup END

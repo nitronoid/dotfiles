@@ -11,4 +11,7 @@ set scrolloff=999
 set signcolumn=yes
 " Add the gutter line, displays mode, file etc.
 set laststatus=2
+" Visualise the line length limit
+set colorcolumn=80
+highlight ColorColumn ctermbg=Black guibg=darkgrey
 

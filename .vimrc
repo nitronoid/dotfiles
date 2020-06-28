@@ -7,14 +7,13 @@ let configs = [
 \   'language.vim',
 \   'search.vim',
 \   'backup.vim',
-\   'indentation.vim',
 \   'providers.vim',
 \   'line.vim',
 \   'plugins.vim',
 \   'color_scheme.vim',
 \   'terminal.vim',
 \   'syntax_highlighting.vim',
-\   'clang_format.vim'
+\   'formatting.vim'
 \]
 
 " Configuration directory
