@@ -1,0 +1,25 @@
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
+noremap <C-w>; <C-w>l
+noremap <C-w>l <C-w>k
+noremap <C-w>k <C-w>j
+noremap <C-w>j <C-w>h
+
+" live search while typing
+set incsearch
+" highlight while searching
+set hlsearch
+
+" Highlight the current line
+set cursorline
+" Add line numbers
+set number
+set list
+" Keep the current line centred
+set scrolloff=999
+" Add the gutter line, displays mode, file etc.
+set laststatus=2
+
+set clipboard=unnamed
