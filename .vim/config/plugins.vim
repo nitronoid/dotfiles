@@ -3,7 +3,7 @@ call plug#begin('~/.vim/bundle')
 " Pass the path to set the runtimepath properly.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'rhysd/vim-clang-format'
 Plug 'rust-lang/rust.vim'

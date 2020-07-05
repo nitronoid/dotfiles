@@ -12,6 +12,9 @@ let g:gruvbox_undercurl=1
 let g:gruvbox_contrast_dark="hard"
 " Use gruvbox
 colorscheme gruvbox
-" Use airline fonts
-let g:airline_powerline_fonts=1
-
+" Hide -- INSERT --
+set noshowmode
+" Use a complementary lightline theme for gruvbox
+let g:lightline = {
+\ 'colorscheme': 'wombat',
+\ }
