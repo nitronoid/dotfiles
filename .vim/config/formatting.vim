@@ -1,10 +1,10 @@
 " when indenting with '>', use 2 spaces width
-set noexpandtab
-set tabstop=2
-set shiftwidth=2
+set expandtab
+set tabstop=4
+set shiftwidth=4
 set softtabstop=-1
 set autoindent
-let g:vim_indent_guides_start_level = 2
+let g:vim_indent_guides_start_level = 4
 " Visualise white-space
 set lcs=trail:·,tab:»·
 
