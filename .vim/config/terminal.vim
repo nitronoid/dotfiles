@@ -28,11 +28,11 @@ endfunction
 
 " Toggle terminal on/off (neovim)
 " This pair is for a new tab terminal
-nnoremap <A-t> :call TermToggle(12, 0)<CR>
-tnoremap <A-t> <C-\><C-n>:call TermToggle(12, 0)<CR>
+nnoremap <M-t> :call TermToggle(12, 0)<CR>
+tnoremap <M-t> <C-\><C-n>:call TermToggle(12, 0)<CR>
 " This pair is for a gutter terminal
-nnoremap <A-g> :call TermToggle(12, 1)<CR>
-tnoremap <A-g> <C-\><C-n>:call TermToggle(12, 1)<CR>
+nnoremap <M-g> :call TermToggle(12, 1)<CR>
+tnoremap <M-g> <C-\><C-n>:call TermToggle(12, 1)<CR>
 
 " Escape from terminal mode
 tnoremap <Esc> <C-\><C-n>

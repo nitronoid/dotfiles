@@ -13,14 +13,8 @@ source ~/.fzf.bash
 export PS1="\[\e[31m\]\u@\h:\W$\[\e[0m\] "
 
 # Alias common compiler options
-alias clang11="clang++ -std=c++11"
-alias g++11="g++ -std=c++11"
-alias clang14="clang++ -std=c++14"
-alias g++14="g++ -std=c++14"
-alias clang17="clang++ -std=c++17"
-alias g++17="g++ -std=c++17"
-
 fast_opts="\
+-std=c++20 \
 -Ofast \
 -march=native \
 -fopenmp \
@@ -28,14 +22,13 @@ fast_opts="\
 -frename-registers \
 -funroll-loops \
 "
-alias g++_fast="g++17 ${fast_opts}"
-alias clang_fast="clang17 ${fast_opts}"
+alias g++_fast="g++ ${fast_opts}"
+alias clang_fast="clang++ ${fast_opts}"
 
 export EDITOR="nvim"
 
 # Rust-lang
 source ~/.cargo/env
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # Use a modern ls
 alias ls='exa'
@@ -54,14 +47,6 @@ export FZF_DEFAULT_COMMAND="fd"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--preview='bat {} --color=always'"
 
-# tldr command colour config
-export TLDR_COLOR_BLANK="white"
-export TLDR_COLOR_NAME="white underline bold"
-export TLDR_COLOR_DESCRIPTION="green"
-export TLDR_COLOR_EXAMPLE="yellow"
-export TLDR_COLOR_COMMAND="cyan"
-export TLDR_COLOR_PARAMETER="white"
-
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   source ~/.config/exercism/exercism_completion.bash
 fi
@@ -72,4 +57,8 @@ set -o vi
 export DISPLAY=:0
 export NODE_ENV=production
 
-export PATH="${PATH}:${HOME}/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin"
+export PATH="${PATH}:${HOME}/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin"
+source "$HOME/.cargo/env"
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
