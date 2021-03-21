@@ -2,3 +2,10 @@
 dotfiles
 !.vim/config/*
 !.vimrc
+!.vsvimrc
+!.profile
+!.inputrc
+!.clang-format
+!.gitignore
+!.github
+!.config/nvim
