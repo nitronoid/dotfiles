@@ -1,10 +1,12 @@
-# Install deps
+# New machine setup
+
+## Install deps
 ```
 sudo apt-get update
 sudo apt install build-essentials gnupg2 cmake python2 python3 pkg-config libtool libtool-bin unzip gettext curl
 ```
 
-# Git config
+## Git config
 ```
 git config --global user.name "Jack Diver"
 git config --global user.email "jackdiver@hotmail.co.uk"
@@ -26,6 +28,7 @@ git config --global alias.p4 "!'git-p4'"
 git config --global alias.plog "log --compact-summary --graph"
 git config --global git-p4.detectRenames true
 git config --global git-p4.detectCopies true
+git config --global gpg.program /usr/bin/gpg2
 
 # ssh key for git
 ssh-keygen -t rsa -b 4096 -C "jackdiver@hotmail.co.uk"
@@ -40,26 +43,30 @@ git config --global commit.gpgSign true
 git config --global user.signingKey <key>
 ```
 
+## Install rust
 ```
-# Install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Install rust tools
 cargo install exa fd-find riggrep
 ```
 
+## Clone dotfiles
 ```
-# dotfiles
 git clone --bare git@github.com:nitronoid/dotfiles ${HOME}/dotfiles
 alias dotfiles='/usr/bin/git --git-dir=${HOME}/dotfiles --work-tree=${HOME}'
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
+```
 
-# Dev workspace
+## Dev workspace
+```
 mkdir -p ~/dev/git
 mkdir ~/dev/local
 mkdir ~/dev/hg
+```
 
-# Clone tools I use
+## Clone and build tools
+```
 git clone git@github.com:neovim/neovim.git ~/dev/git/neovim
 git clone --depth 1 git@github.com:junegunn/fzf.git ~/dev/git/fzf
 
@@ -68,16 +75,7 @@ git clone --depth 1 git@github.com:junegunn/fzf.git ~/dev/git/fzf
 cd ~/dev/git/neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo && sudo make install
 ```
 
-```
-# Make backup dirs
-mkdir -p ~/.vim/undo_files
-mkdir -p ~/.vim/backups
-# Get vimplug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# Install plugins
-nvim +PlugInstall
-```
-
+## Install node for coc-clangd
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 # Might require moving sourcing from .bashrc to .profile
@@ -85,7 +83,17 @@ nvm install node
 nvm install --lts
 ```
 
+## Neovim setup
 ```
+# Make backup dirs
+mkdir -p ~/.vim/undo_files
+mkdir -p ~/.vim/backups
+
+# Get vimplug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install plugins
+nvim +PlugInstall
 :CocInstall coc-clangd
 :CocCommand clangd.install
 ```
