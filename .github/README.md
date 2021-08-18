@@ -47,7 +47,7 @@ git config --global user.signingKey <key>
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Install rust tools
-cargo install exa fd-find riggrep
+cargo install exa fd-find ripgrep
 ```
 
 ## Clone dotfiles
