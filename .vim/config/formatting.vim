@@ -1,4 +1,4 @@
-" when indenting with '>', use 2 spaces width
+" when indenting with '>', use 4 spaces width
 set expandtab
 set tabstop=4
 set shiftwidth=4

@@ -9,9 +9,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 source ~/.fzf.bash
 
-# Terminal colours
-#export PS1="\[\e[0m\]\u@\H:\W$\[\e[m\] "
-
 # Alias common compiler options
 fast_opts="\
 -std=c++20 \

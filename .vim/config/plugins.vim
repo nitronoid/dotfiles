@@ -15,6 +15,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'lambdalisue/suda.vim'
+Plug 'embear/vim-localvimrc'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 
