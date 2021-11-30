@@ -1,5 +1,3 @@
-" Use terminal color palette
-set termguicolors
 " Use dark color schemes when available
 set background=dark
 " Gruvbox color scheme options

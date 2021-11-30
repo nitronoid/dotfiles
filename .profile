@@ -10,7 +10,7 @@ fi
 source ~/.fzf.bash
 
 # Terminal colours
-export PS1="\[\e[31m\]\u@\h:\W$\[\e[0m\] "
+#export PS1="\[\e[0m\]\u@\H:\W$\[\e[m\] "
 
 # Alias common compiler options
 fast_opts="\
@@ -54,11 +54,11 @@ fi
 # vi mode in the shell
 set -o vi
 
-export DISPLAY=:0
 export NODE_ENV=production
 
-export PATH="${PATH}:${HOME}/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin"
 source "$HOME/.cargo/env"
+
+export QMK_HOME='~/qmk_firmware'
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

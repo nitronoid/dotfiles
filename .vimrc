@@ -24,4 +24,3 @@ for f in configs
   exec 'source '.s:vim_home.'/'.f
 endfor
 
-
