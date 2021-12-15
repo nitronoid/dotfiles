@@ -13,6 +13,7 @@ let configs = [
 \   'color_scheme.vim',
 \   'terminal.vim',
 \   'syntax_highlighting.vim',
+\   'coc.vim',
 \   'formatting.vim'
 \]
 
