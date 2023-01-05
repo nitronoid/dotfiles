@@ -9,6 +9,7 @@ let configs = [
 \   'backup.vim',
 \   'providers.vim',
 \   'line.vim',
+\   'clipboard.vim',
 \   'plugins.vim',
 \   'color_scheme.vim',
 \   'terminal.vim',

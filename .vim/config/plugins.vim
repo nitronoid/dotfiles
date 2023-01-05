@@ -21,3 +21,6 @@ call plug#end()            " required
 
 " Disassemble SPIRV when editing
 let g:spirv_enable_autodisassemble = 1
+
+" Don't ask to load lvimrc, just do it
+let g:localvimrc_ask = 0
