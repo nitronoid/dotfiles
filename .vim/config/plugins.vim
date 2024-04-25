@@ -1,19 +1,17 @@
 " plugins here
 call plug#begin('~/.vim/bundle')
 " Pass the path to set the runtimepath properly.
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'morhetz/gruvbox'
+Plug 'echasnovski/mini.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'HiPhish/rainbow-delimiters.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'itchyny/lightline.vim'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'rhysd/vim-clang-format'
 Plug 'rust-lang/rust.vim'
-Plug 'superfunc/usda-syntax'
-Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'kbenzie/vim-spirv'
-Plug 'chrisbra/csv.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'lambdalisue/suda.vim'
 Plug 'embear/vim-localvimrc'
 " All of your Plugins must be added before the following line
