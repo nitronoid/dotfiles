@@ -1,4 +1,0 @@
-{
-    "clangd.semanticHighlighting": true,
-    "clangd.fallbackFlags": ["-std=c++2a"],
-}
